@@ -3,99 +3,169 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
         <link rel="stylesheet" href="style.css">
-        <title>SpaceCat</title>
+
+        <title>Space Cat</title>
     </head>
     <body>
-        <!-- OVERLAY -->
-        <div class="overlay first"></div>
-        <div class="overlay second"></div>
-        <div class="overlay third"></div>
-
-        <!-- SCROLL TOP -->
+        <!--========== SCROLL TOP ==========-->
         <a href="#" class="scrolltop" id="scroll-top">
-            <b
-            i class='bx bx-chevron-up scrolltop_icon'></i>
-
+            <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
         </a>
-        <!-- HEADER -->
-        <header class="l-header" id='header'>
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">SpaceCat</a>
-                </div>
+        
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav sc-container">
+                <a href="#" class="nav__logo">SPACE CAT</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#" class="nav__link active-link">HOME</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link active-link">ABOUT</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">PRESSKIT</a></li>
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">HOME</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">ABOUT US</a></li>
+                        <li class="nav__item"><a href="#presskit" class="nav__link">PRESS KIT</a></li>
+
+                        <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
                     </ul>
                 </div>
 
                 <div class="nav__toggle" id="nav-toggle">
-                    <ion-icon name="menu"></ion-icon>
+                    <i class='bx bx-grid-alt'></i>
                 </div>
             </nav>
         </header>
 
-        <!-- MAIN -->
-        <main class="l-main bd-grid">
+        <main class="l-main">
+            <!--========== HOME ==========-->
             <section class="home" id="home">
-               <div class="home_data">
-                    <div class="home__information">
-                    <h1 class="home__title">Space Cat</h1>
+                <div class="home__container sc-container sc-grid">
+
+                    <div class="home__data">
+                        <h1 class="home__title">SpaceCat</h1>
+                    </div>   
+                </div>
+            </section>
+
+            <!--========== VIDEO ==========-->
+            <section class="video section sc-container" id="video">
+                <div class="video__container sc-grid">
+                    <video width="550" height="450" controls>
+                        <source src="sc_video.mp4" type="video/mp4">
+                        <source src="sc_video.ogg" type="video/ogg">
+                      </video>
                     </div>
 
-                <div class="home__img">
-                    <img src="img/stars.gif" alt="">
+            </section>
+
+            <!--========== ABOUT ==========-->
+            <section class="about section sc-container" id="about">
+                <h2 class="section-title">About Us</h2>
+
+                <div class="about__content">
+                    <img src="haval.png" alt="" class="about__img">
+                    <h3 class="about__title">Haval</h3>
+                    <span class="about__category">CEO</span>
                 </div>
+
+                <div class="accessory__container bd-grid">
+                    <div class="about__content">
+                        <img src="erva.png" alt="" class="about__img">
+                        <h3 class="about__title">Erva Karabulut</h3>
+                        <span class="about__category">Founder</span>
+                        <span class="about_mail">ekarabulut@space.de</span>
+                    </div>
+
+                    <div class="about__content">
+                        <img src="nuhat.png" alt="" class="about__img">
+                        <h3 class="about__title">Nuhat Yusufoglu</h3>
+                        <span class="about__category">Founder</span>
+                        <span class="about_mail">nyusufoglu@space.de</span>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== PRESSKIT ==========-->
+            <section class="presskit section sc-container" id="presskit">
+                <h2 class="section-title">Press Kit</h2>
+
+                <div class="gcontainer">
+
+                    <div class="gsubcontainer">
+                      <h4> Promotional Poster</h4>
+                      Get yourself a copy of our official SpaceCat promotional poster.
+                      <br>
+                      <div class="gsubcontainer-poster">
+                        <img src="Poster1.jpg" class="posterpreview">
+                      </div>
+
+                      <a class="button" href="Poster1.pdf"  target="_blank" download="Poster1.pdf">Download</a>
+                    </div>
+
+                        <div class="gsubcontainer">
+                            <h4> Radio Commercial</h4>
+                            Take a listen to our official SpaceCat radio commercial broadcasted all around the world.
+                            <div class="gsubcontainer-radio">
+                                <audio id="audio_with_controls"
+                                  controls
+                                  src="Radiospot_Spacecat.mp3"
+                                  type="audio/mp3">
+                                </audio>
+                              </div>
+                            <br> <a class="button" href="Radiospot_Spacecat.mp3"  target="_blank" download="Radiospot_Spacecat.mp3">Download</a>
+                            </div> 
+                </div>
+
+
+            <!--========== SEND CREATIONS ==========-->
+            <section class="send section">
+                <div class="send__container sc-container sc-grid">
+                    <div class="send__content">
+                        <h2 class="section-title-center send__title">Send Us Your Creations Now</h2>
+                        <p class="send__description">Send your drawings to one of our email addresses and win a personalized Haval stuffed animal!
+                        </p>
+
+                        <form action="">
+                            <div class="send__direction">
+                                <input type="text" placeholder="E-mail address" class="send__input">
+                                <a href="#" class="button">Send</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="send__img">
+                        <img src="assets/img/send.png" alt="">
+                    </div>
                 </div>
             </section>
         </main>
 
-        <!-- ABOUT -->
-        <section class="about section bd-container" id="about">
-            <h2 class="section-title">ABOUT US</h2>
-
-            <div class="about_container bd-grid">
-                <div class="about_data bd-grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Company</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Blog</a></li>
+                        <li><a href="#" class="footer__link">About us</a></li>
+                        <li><a href="#" class="footer__link">Our mission</a></li>
+                    </ul>
                 </div>
 
-                <img src="erva.png" class="image_about">
-                <div class="profilet"> Erva Karabulut <br>
-                <span class="yellow">Founder</span> <br>
-                e.karabulut@space.de
-            </div>
-
-            <div class="about_container bd-grid">
-                <div class="about_data bd-grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook-circle '></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
                 </div>
-
-                <img src="nuhat.png" class="image_about">
-                <div class="profilet"> Nuhat Yusufoglu <br>
-                <span class="yellow">Founder</span> <br>
-                n.yusufoglu@space.de
             </div>
 
-            <div class="about_container bd-grid">
-                <div class="about_data bd-grid">
-                </div>
+        </footer>
 
-                <img src="haval.png" class="image_about">
-                <div class="profilet"> Haval Yusufoglu <br>
-                <span class="yellow">CEO</span> 
-            </div>
-            </div>
-        </section>
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
 
-        <!-- GSAP -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-
-        <!-- MAIN -->
+        <!--========== MAIN JS ==========-->
         <script src="script.js"></script>
-    
-        <!-- ICONS -->
-        <script  type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     </body>
 </html>
